@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOSECURE CONSULTANCY | Enterprise AI Solutions & Cybersecurity Training</title>
+  <meta name="description" content="GOSECURE CONSULTANCY delivers enterprise cybersecurity hardening, custom AI automation, and high-impact PBEL technical training led exclusively by industry technology veterans.">
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              navy: '#060B18',
+              surface: '#0B132B',
+              card: '#111C38',
+              cardHover: '#18274C',
+              border: '#1E2F5B',
+              cyan: '#00F0FF',
+              blue: '#2563EB',
+              blueLight: '#38BDF8',
+              emerald: '#10B981',
+              violet: '#8B5CF6',
+              textMuted: '#94A3B8',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'radar-sweep': 'radarSweep 3s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            radarSweep: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #060B18;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E2F5B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2563EB;
+    }
+    .glass-nav {
+      background: rgba(6, 11, 24, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(30, 47, 91, 0.6);
+    }
+    .glass-card {
+      background: rgba(17, 28, 56, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(30, 47, 91, 0.7);
+    }
+    .cyber-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .neon-glow-cyan {
+      box-shadow: 0 0 25px -4px rgba(0, 240, 255, 0.25);
+    }
+    .neon-glow-blue {
+      box-shadow: 0 0 30px -5px rgba(37, 99, 235, 0.35);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-navy text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-brand-cyan selection:text-brand-navy">
+
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-cyan/50 rounded-lg p-1">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-cyan p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div class="w-full h-full bg-brand-navy rounded-[10px] flex items-center justify-center">
+              <svg class="w-5 h-5 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-lg sm:text-xl tracking-wider text-white">GOSECURE<span class="text-brand-cyan">.</span></span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-brand-textMuted -mt-1">Consultancy</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#hero" class="hover:text-brand-cyan transition-colors duration-200">Home</a>
+          <a href="#pedigree" class="hover:text-brand-cyan transition-colors duration-200">Why Us</a>
+          <a href="#services" class="hover:text-brand-cyan transition-colors duration-200">B2B Services</a>
+          <a href="#training" class="hover:text-brand-cyan transition-colors duration-200">PBEL Training</a>
+          <a href="#sandbox" class="hover:text-brand-cyan transition-colors duration-200">Ops Sandbox</a>
+          <a href="#leadership" class="hover:text-brand-cyan transition-colors duration-200">Leadership</a>
+          <a href="#testimonials" class="hover:text-brand-cyan transition-colors duration-200">Testimonials</a>
+          <a href="#contact" class="hover:text-brand-cyan transition-colors duration-200">Contact</a>
+        </nav>
+
+        <!-- CTA & Quick Actions -->
+        <div class="hidden lg:flex items-center gap-4">
+          <button onclick="scrollToContact('Enterprise Consultation')" class="px-5 py-2.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-brand-blue to-blue-600 hover:from-blue-600 hover:to-brand-cyan text-white shadow-lg shadow-brand-blue/20 hover:shadow-brand-cyan/20 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2">
+            <span>Get a Quote</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-brand-surface focus:outline-none">
+          <svg class="w-6 h-6" id="hamburgerIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg class="w-6 h-6 hidden" id="closeIcon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-surface border-b border-brand-border px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col space-y-4">
+        <a href="#hero" class="mobile-nav-link text-base text-slate-300 hover:text-brand-cyan">Home</a>
+        <a href="#pedigree" class="mobile-nav-link text-base text-slate-300 hover:text-brand-cyan">Why Us</a>
+        <a href="#services" class="mobile-nav-link text-base text-slate-300 hover:text-brand-cyan">B2B Services</a>
+        <a href="#training" class="mobile-nav-link text-base text-slate-300 hover:text-brand-cyan">PBEL Training</a>
+        <a href="#sandbox" class="mobile-nav-link text-base text-slate-300 hover:text-brand-cyan">Interactive Sandbox</a>
+        <a href="#leadership" class="mobile-nav-link text-base text-slate-300 hover:text-brand-cyan">Leadership</a>
+        <a href="#testimonials" class="mobile-nav-link text-base text-slate-300 hover:text-brand-cyan">Testimonials</a>
+        <a href="#contact" class="mobile-nav-link text-base text-slate-300 hover:text-brand-cyan">Contact</a>
+        <div class="pt-4 border-t border-brand-border/60">
+          <button onclick="scrollToContact('Mobile Quote Request')" class="w-full py-3 rounded-xl font-semibold text-center bg-gradient-to-r from-brand-blue to-brand-cyan text-white shadow-lg">
+            Get a Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="relative pt-32 pb-20 md:pt-40 md:pb-28 cyber-grid overflow-hidden">
+    <!-- Ambient Radial Gradients -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-blue/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-brand-cyan/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Copy & Value Proposition -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Trust Badge Chip -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-border/80 shadow-inner">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-cyan"></span>
+            </span>
+            <span class="text-xs font-semibold tracking-wide uppercase text-slate-300">
+              Enterprise Defense & AI Automation
+            </span>
+            <span class="bg-brand-blue/30 text-brand-blueLight border border-brand-blue/40 text-[10px] font-bold px-2 py-0.5 rounded-md">
+              Expert Led
+            </span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+            Securing Enterprise Infrastructure. <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-blueLight to-brand-blue">
+              Engineering the Future with AI.
+            </span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            GoSecure Consultancy safeguards modern enterprises through offensive cybersecurity (VAPT) and zero-trust engineering, streamlines operations with custom AI automation, and upskills high-caliber technical teams via rigorous, experiential learning.
+          </p>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#training" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-brand-blue to-cyan-500 hover:from-blue-600 hover:to-brand-cyan text-white shadow-xl shadow-brand-blue/25 hover:shadow-brand-cyan/25 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <span>Explore Training Programs</span>
+            </a>
+            
+            <button onclick="scrollToContact('General Consultation Request')" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold text-sm bg-brand-card hover:bg-brand-cardHover border border-brand-border text-slate-200 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 hover:border-slate-500">
+              <svg class="w-4 h-4 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>Schedule a Consultation</span>
+            </button>
+          </div>
+
+          <!-- Quick Trust Badges -->
+          <div class="pt-6 border-t border-brand-border/60 flex flex-wrap items-center justify-center lg:justify-start gap-y-3 gap-x-8 text-xs text-brand-textMuted font-medium">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Certified Enterprise Architects</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Zero-Day Attack Resilience</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-emerald" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Live Experiential Sandboxes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Live Telemetry / Radar Component -->
+        <div class="lg:col-span-5">
+          <div class="glass-card rounded-2xl p-5 sm:p-6 shadow-2xl relative overflow-hidden border border-brand-border/90 neon-glow-cyan animate-float">
+            
+            <!-- Telemetry Card Header -->
+            <div class="flex items-center justify-between border-b border-brand-border/80 pb-4 mb-5">
+              <div class="flex items-center gap-2.5">
+                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                <span class="text-xs font-mono text-slate-400 pl-2">gosecure-soc-monitor.v2</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/30 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald animate-ping"></span>
+                ACTIVE AUDIT
+              </span>
+            </div>
+
+            <!-- Radar & Metrics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+              
+              <!-- Simulated Radar Canvas Box -->
+              <div class="relative flex flex-col items-center justify-center p-4 bg-brand-navy/80 rounded-xl border border-brand-border/60">
+                <div class="relative w-36 h-36 rounded-full border border-brand-cyan/30 flex items-center justify-center">
+                  <!-- Circular rings -->
+                  <div class="absolute w-24 h-24 rounded-full border border-brand-blue/30"></div>
+                  <div class="absolute w-12 h-12 rounded-full border border-brand-cyan/20"></div>
+                  <div class="absolute w-full h-[1px] bg-brand-cyan/15"></div>
+                  <div class="absolute h-full w-[1px] bg-brand-cyan/15"></div>
+                  <!-- Radar Needle Sweep -->
+                  <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-cyan/20 via-transparent to-transparent animate-radar-sweep pointer-events-none"></div>
+                  <!-- Threat Markers -->
+                  <div class="absolute top-6 right-8 w-2 h-2 rounded-full bg-brand-cyan animate-ping"></div>
+                  <div class="absolute bottom-8 left-7 w-2 h-2 rounded-full bg-brand-emerald"></div>
+                  <div class="absolute top-16 left-5 w-1.5 h-1.5 rounded-full bg-amber-400"></div>
+                  <div class="text-[10px] font-mono font-bold text-brand-cyan tracking-wider z-10">SOC SHIELD</div>
+                </div>
+                <div class="text-[11px] font-mono text-slate-400 mt-2 text-center">Threat Vector Grid</div>
+              </div>
+
+              <!-- Live Metric Tiles -->
+              <div class="space-y-3 font-mono">
+                <div class="p-2.5 rounded-lg bg-brand-navy/60 border border-brand-border/50">
+                  <div class="text-[10px] text-brand-textMuted uppercase">ML Model Latency</div>
+                  <div class="text-sm font-bold text-white flex items-center justify-between">
+                    <span id="statLatency">14.2 ms</span>
+                    <span class="text-[10px] text-brand-emerald">Optimal</span>
+                  </div>
+                  <div class="w-full bg-slate-800 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                    <div class="bg-brand-cyan h-full rounded-full" style="width: 88%"></div>
+                  </div>
+                </div>
+
+                <div class="p-2.5 rounded-lg bg-brand-navy/60 border border-brand-border/50">
+                  <div class="text-[10px] text-brand-textMuted uppercase">Defensive Hardening</div>
+                  <div class="text-sm font-bold text-white flex items-center justify-between">
+                    <span>99.98% SLA</span>
+                    <span class="text-[10px] text-brand-blueLight">Enterprise</span>
+                  </div>
+                  <div class="w-full bg-slate-800 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                    <div class="bg-brand-blue h-full rounded-full" style="width: 99%"></div>
+                  </div>
+                </div>
+
+                <div class="p-2.5 rounded-lg bg-brand-navy/60 border border-brand-border/50">
+                  <div class="text-[10px] text-brand-textMuted uppercase">Simulated PBEL Sandbox</div>
+                  <div class="text-sm font-bold text-white flex items-center justify-between">
+                    <span>Active Clusters</span>
+                    <span class="text-[10px] text-brand-emerald">12 Labs</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Ticker Log -->
+            <div class="mt-4 p-3 bg-brand-navy/90 rounded-lg border border-brand-border/60 text-xs font-mono">
+              <div class="text-[10px] text-slate-400 pb-1 border-b border-slate-800/80 flex justify-between">
+                <span>SIMULATED AUDIT FEED</span>
+                <span id="logTimestamp">LIVE</span>
+              </div>
+              <div class="pt-2 text-slate-300 space-y-1 text-[11px] truncate">
+                <p class="text-brand-emerald">&gt; [AUTH_OK] Zero-Trust Token issued for Cloud-Pod-04</p>
+                <p class="text-brand-blueLight">&gt; [AI_AGENT] Automated semantic scan executed: 0 alerts</p>
+                <p class="text-slate-400">&gt; [PBEL_LAB] Student #2409 deployed Nmap stealth syn scan</p>
+              </div>
+            </div>
+
+            <!-- Interactive quick trigger -->
+            <div class="mt-4 flex items-center justify-between pt-2">
+              <span class="text-xs text-slate-400">Need real-time audit?</span>
+              <button onclick="scrollToContact('Enterprise Security VAPT')" class="text-xs font-bold text-brand-cyan hover:underline flex items-center gap-1">
+                Request SOC Assessment &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="pedigree" class="py-16 bg-gradient-to-b from-brand-surface via-brand-navy to-brand-navy border-y border-brand-border relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Prominent Callout Card -->
+      <div class="relative p-8 md:p-12 rounded-3xl bg-gradient-to-r from-brand-card via-[#132247] to-brand-card border-2 border-brand-cyan/40 shadow-2xl overflow-hidden neon-glow-cyan">
+        
+        <!-- Decorative Background Brand Motif -->
+        <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-brand-blue/15 blur-3xl pointer-events-none"></div>
+        <div class="absolute right-8 bottom-8 text-8xl font-black text-white/[0.03] select-none pointer-events-none font-mono tracking-tighter">
+          EXPERTS
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          
+          <div class="lg:col-span-8 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-bold uppercase tracking-wider">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+              Reputed Industry Benchmark
+            </div>
+
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+              All our trainers bring reputed industry experience and are <span class="text-brand-cyan underline decoration-brand-blue/80 decoration-4 underline-offset-4">seasoned professionals.</span>
+            </h2>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+              Unlike theoretical bootcamps, our curriculums and corporate consultancies are spearheaded by seasoned engineers who have managed mission-critical mainframe workloads, architected enterprise AI pipelines, and led offensive cybersecurity missions at global Fortune 100 organizations.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-navy flex items-center justify-center text-brand-cyan font-bold border border-brand-border">
+                  ✓
+                </div>
+                <div class="text-xs">
+                  <div class="font-bold text-white">Enterprise Standards</div>
+                  <div class="text-slate-400">Strict Quality Assurance</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-navy flex items-center justify-center text-brand-cyan font-bold border border-brand-border">
+                  ✓
+                </div>
+                <div class="text-xs">
+                  <div class="font-bold text-white">Battle-Tested Faculty</div>
+                  <div class="text-slate-400">Real Production Incidents</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-navy flex items-center justify-center text-brand-cyan font-bold border border-brand-border">
+                  ✓
+                </div>
+                <div class="text-xs">
+                  <div class="font-bold text-white">High Career Velocity</div>
+                  <div class="text-slate-400">Mentorship with Leaders</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 flex flex-col items-center justify-center p-6 rounded-2xl bg-brand-navy/90 border border-brand-border/80 text-center">
+            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-cyan p-0.5 mb-4">
+              <div class="w-full h-full bg-brand-navy rounded-[14px] flex items-center justify-center">
+                <svg class="w-8 h-8 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+            </div>
+            <div class="text-3xl font-extrabold text-white">Proven Expertise</div>
+            <div class="text-xs uppercase font-semibold text-brand-cyan tracking-wider mt-1">Enterprise Tech Leadership</div>
+            <p class="text-xs text-slate-400 mt-2">
+              Transforming academic rigor and enterprise consulting into measurable business outcomes.
+            </p>
+            <a href="#leadership" class="mt-4 text-xs font-bold text-white hover:text-brand-cyan inline-flex items-center gap-1.5 transition-colors">
+              Meet Our Founders &rarr;
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-12 bg-brand-navy border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+        
+        <div class="p-5 rounded-2xl glass-card text-center hover:border-brand-cyan/40 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-cyan tracking-tight font-mono">2,500+</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-200 mt-1">Engineers Upskilled</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Corporate & PBEL Graduates</div>
+        </div>
+
+        <div class="p-5 rounded-2xl glass-card text-center hover:border-brand-blueLight/40 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-blueLight tracking-tight font-mono">45+</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-200 mt-1">Enterprise Audits</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">VAPT & AI Integrations</div>
+        </div>
+
+        <div class="p-5 rounded-2xl glass-card text-center hover:border-brand-emerald/40 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-emerald tracking-tight font-mono">99.8%</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-200 mt-1">Client Satisfaction</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">Audits & Training Feedback</div>
+        </div>
+
+        <div class="p-5 rounded-2xl glass-card text-center hover:border-brand-cyan/40 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-mono">100%</div>
+          <div class="text-xs sm:text-sm font-semibold text-slate-200 mt-1">Verified Experts</div>
+          <div class="text-[11px] text-brand-cyan mt-0.5">Industry Instructor Core</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-brand-navy relative cyber-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-blue/20 border border-brand-blue/40 text-brand-blueLight text-xs font-bold uppercase tracking-wider">
+          Enterprise Solutions
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Engineered for Cyber Resilience & Operational Velocity
+        </h2>
+        <p class="text-slate-300 text-base">
+          We equip fast-scaling companies and enterprise IT infrastructures with high-precision cybersecurity defense audits and autonomous AI integrations that reduce overhead by up to 60%.
+        </p>
+      </div>
+
+      <!-- Services Grid: 2 Major Pillars (AI Automation & Cybersecurity) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        
+        <!-- Pillar 1: AI Automation Solutions -->
+        <div class="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-brand-cyan/50 transition-all duration-300 flex flex-col justify-between">
+          <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-brand-cyan/10 blur-2xl group-hover:bg-brand-cyan/20 transition-all pointer-events-none"></div>
+
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-brand-cyan/10 border border-brand-cyan/30 flex items-center justify-center text-brand-cyan">
+                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <span class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-800 text-brand-cyan border border-brand-cyan/20">
+                Pillar 01 • Intelligent Ops
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3">AI Automation Solutions</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Empower your enterprise with autonomous agentic pipelines, customized fine-tuned models, and robust cognitive document processing that replaces manual grunt work with deterministic speed.
+            </p>
+
+            <ul class="space-y-3.5 mb-8 text-sm text-slate-200">
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-cyan flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-white">Custom ML Model Integration:</strong>
+                  <span class="text-slate-400 block text-xs mt-0.5">Domain-specific regression, predictive classifiers, and fine-tuned open-source LLMs connected to your secure data.</span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-cyan flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-white">Intelligent Workflow Automation:</strong>
+                  <span class="text-slate-400 block text-xs mt-0.5">Multi-agent LangChain/LlamaIndex automation orchestrating enterprise ERP, CRM, and internal helpdesk ticketing.</span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-cyan flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-white">Automated Document Processing (IDP):</strong>
+                  <span class="text-slate-400 block text-xs mt-0.5">OCR + NLP pipelines for instant invoice parsing, contract verification, and regulatory compliance tagging.</span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-brand-cyan/20 text-brand-cyan flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-white">Predictive Business Analytics:</strong>
+                  <span class="text-slate-400 block text-xs mt-0.5">Continuous data feeds transforming warehouse data into churn forecasts, inventory optimization, and executive insights.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-brand-border/60 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-400">Tech: PyTorch • RAG • FastEngine</span>
+            <button onclick="prefillLeadService('AI Automation Solutions')" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-brand-cyan text-brand-navy hover:bg-white transition-colors duration-200">
+              Request AI Assessment
+            </button>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Enterprise Cybersecurity Services -->
+        <div class="glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-brand-blueLight/50 transition-all duration-300 flex flex-col justify-between">
+          <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-brand-blue/10 blur-2xl group-hover:bg-brand-blue/20 transition-all pointer-events-none"></div>
+
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-brand-blue/15 border border-brand-blue/40 flex items-center justify-center text-brand-blueLight">
+                <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <span class="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-slate-800 text-brand-blueLight border border-brand-blue/30">
+                Pillar 02 • Enterprise Defense
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-3">Enterprise Cybersecurity Services</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Defend your corporate perimeter, cloud assets, and proprietary IP with end-to-end vulnerability management, red-teaming simulations, and enterprise-grade Zero-Trust architectures.
+            </p>
+
+            <ul class="space-y-3.5 mb-8 text-sm text-slate-200">
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-brand-blue/30 text-brand-blueLight flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-white">Full-Scope VAPT Audits:</strong>
+                  <span class="text-slate-400 block text-xs mt-0.5">Offensive ethical hacking for Web Apps, REST/GraphQL APIs, Mobile Apps (iOS/Android), and Cloud (AWS/Azure/GCP).</span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-brand-blue/30 text-brand-blueLight flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-white">Zero-Trust Network Architecture:</strong>
+                  <span class="text-slate-400 block text-xs mt-0.5">Micro-segmentation, identity-aware proxies, least-privilege RBAC, and multi-factor hardware security integration.</span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-brand-blue/30 text-brand-blueLight flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-white">Network & SIEM Hardening:</strong>
+                  <span class="text-slate-400 block text-xs mt-0.5">Next-Gen firewall auditing, IDS/IPS tuning, SOC 2/ISO 27001 log collection, and real-time threat alert triaging.</span>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-3">
+                <div class="w-5 h-5 rounded-full bg-brand-blue/30 text-brand-blueLight flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <strong class="text-white">Data Governance & Compliance:</strong>
+                  <span class="text-slate-400 block text-xs mt-0.5">Data loss prevention (DLP), GDPR/HIPAA posture evaluations, cryptographic key rotation, and forensic readiness.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-brand-border/60 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-400">Cert: OWASP • NIST • CIS Top 20</span>
+            <button onclick="prefillLeadService('Cybersecurity VAPT & Defense')" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-brand-blue text-white hover:bg-blue-600 transition-colors duration-200">
+              Request VAPT Audit
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Feature Highlight Ribbon -->
+      <div class="mt-12 p-6 rounded-2xl bg-brand-surface border border-brand-border flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-emerald/10 border border-brand-emerald/30 flex items-center justify-center text-brand-emerald shrink-0">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base">Complimentary 30-Minute Security & AI Architecture Review</h4>
+            <p class="text-xs text-slate-300">Discuss your infrastructure bottlenecks directly with a principal consultant. Strictly non-disclosure protected.</p>
+          </div>
+        </div>
+        <button onclick="scrollToContact('Complimentary Architecture Review')" class="shrink-0 px-6 py-3 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-brand-cyan border border-brand-cyan/30 transition-all">
+          Book Session Now
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="training" class="py-20 bg-brand-surface relative border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-bold uppercase tracking-wider">
+          EdTech & Talent Acceleration
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Project-Based Experiential Learning (PBEL)
+        </h2>
+        <p class="text-slate-300 text-base">
+          Discarding static slide lectures in favor of live terminal sandboxes, enterprise datasets, and production-grade architectures. Taught exclusively by industry veterans with top-tier engineering backgrounds.
+        </p>
+      </div>
+
+      <!-- PBEL Tracks Interactive Tabs -->
+      <div class="flex justify-center mb-10">
+        <div class="inline-flex p-1.5 rounded-2xl bg-brand-navy border border-brand-border max-w-full overflow-x-auto" role="tablist">
+          <button id="tabTrack1" onclick="switchTrack('track1')" class="track-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-brand-blue text-white shadow-md">
+            Data Analytics & BI
+          </button>
+          <button id="tabTrack2" onclick="switchTrack('track2')" class="track-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-slate-300 hover:text-white">
+            Offensive & Defensive Cyber
+          </button>
+          <button id="tabTrack3" onclick="switchTrack('track3')" class="track-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-slate-300 hover:text-white">
+            Applied AI & Machine Learning
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Contents Container -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-brand-border">
+        
+        <!-- Track 1 Content: Data Analytics & BI -->
+        <div id="contentTrack1" class="track-content block space-y-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-4">
+              <div class="inline-flex items-center gap-2 text-xs font-mono text-brand-cyan">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span> TRACK #01 • EXPERIENTIAL CURRICULUM
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                Enterprise Data Analytics & Executive Business Intelligence
+              </h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Transform raw, unstructured transactional logs into strategic decision models. Trainees work on real simulated corporate data lakes, mastering advanced SQL pipelines, statistical forecasting in R, predictive modeling with Python, and interactive corporate dashboards using Microsoft Power BI and IBM Cognos.
+              </p>
+
+              <!-- Tech Stack Badges -->
+              <div class="pt-2">
+                <div class="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wider">Targeted Tech Stack</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-cyan">Python (Pandas/NumPy)</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-cyan">R Programming</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-cyan">Microsoft Power BI</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-cyan">IBM Cognos Analytics</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-cyan">Advanced SQL & ETL</span>
+                </div>
+              </div>
+
+              <!-- Real-world Capstone highlights -->
+              <div class="pt-2 space-y-2">
+                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Featured PBEL Capstone</div>
+                <div class="p-3 rounded-xl bg-brand-navy/80 border border-brand-border/60 text-xs text-slate-300">
+                  <span class="font-bold text-white">Telecom Churn & Revenue Risk Predictor:</span> Ingest 1.2M historical customer usage records into IBM Cognos & Power BI with integrated Python predictive churn scoring.
+                </div>
+              </div>
+            </div>
+
+            <!-- Track 1 Sandbox / Highlights Card -->
+            <div class="lg:col-span-5 space-y-4">
+              <div class="p-6 rounded-2xl bg-brand-navy border border-brand-border/80 space-y-4">
+                <h4 class="text-base font-bold text-white flex items-center justify-between">
+                  <span>Program Blueprint</span>
+                  <span class="text-xs font-mono text-brand-emerald">8 to 12 Weeks</span>
+                </h4>
+                <div class="space-y-3 text-xs text-slate-300">
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Target Learners:</span>
+                    <span class="font-semibold text-white">Engineers, Business Analysts, IT Teams</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Instruction Format:</span>
+                    <span class="font-semibold text-white">Live Virtual + Lab Hours</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Pedigree Guarantee:</span>
+                    <span class="font-semibold text-brand-cyan">100% Expert Lead Faculty</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Lab Infrastructure:</span>
+                    <span class="font-semibold text-white">Cloud Hosted Jupyter & BI Tenants</span>
+                  </div>
+                </div>
+                <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                  <button onclick="prefillLeadService('PBEL Data Analytics Track')" class="w-full py-2.5 rounded-xl font-bold text-xs bg-brand-cyan text-brand-navy hover:bg-white transition-colors text-center">
+                    Enroll / Corporate Batch
+                  </button>
+                  <button onclick="openSyllabusModal('Data Analytics & BI Track')" class="w-full py-2.5 rounded-xl font-semibold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-brand-border transition-colors text-center">
+                    View Full Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 2 Content: Cybersecurity -->
+        <div id="contentTrack2" class="track-content hidden space-y-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-4">
+              <div class="inline-flex items-center gap-2 text-xs font-mono text-brand-blueLight">
+                <span class="w-2 h-2 rounded-full bg-brand-blueLight"></span> TRACK #02 • EXPERIENTIAL CURRICULUM
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                Practical Offensive & Defensive Cybersecurity (Hands-On SOC)
+              </h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Step inside our isolated enterprise cloud sandboxes. Learn practical reconnaissance, vulnerability assessment, web exploitation, network forensics, and live incident response with real attack vectors—safely and ethically.
+              </p>
+
+              <!-- Tech Stack Badges -->
+              <div class="pt-2">
+                <div class="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wider">Targeted Tech Stack</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-blueLight">Kali Linux Enterprise</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-blueLight">Nmap & Masscan</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-blueLight">Wireshark & Packet Capture</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-blueLight">Metasploit Framework</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-blueLight">Burp Suite Pro Techniques</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-blueLight">OWASP Top 10 Attack Vectors</span>
+                </div>
+              </div>
+
+              <!-- Real-world Capstone highlights -->
+              <div class="pt-2 space-y-2">
+                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Featured PBEL Capstone</div>
+                <div class="p-3 rounded-xl bg-brand-navy/80 border border-brand-border/60 text-xs text-slate-300">
+                  <span class="font-bold text-white">Red vs. Blue Multi-Tier Pentest:</span> Conduct an end-to-end simulated breach on a mock banking microservices architecture, identify privilege escalations, and draft a formal executive remediation report.
+                </div>
+              </div>
+            </div>
+
+            <!-- Track 2 Sandbox / Highlights Card -->
+            <div class="lg:col-span-5 space-y-4">
+              <div class="p-6 rounded-2xl bg-brand-navy border border-brand-border/80 space-y-4">
+                <h4 class="text-base font-bold text-white flex items-center justify-between">
+                  <span>Program Blueprint</span>
+                  <span class="text-xs font-mono text-brand-emerald">10 to 14 Weeks</span>
+                </h4>
+                <div class="space-y-3 text-xs text-slate-300">
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Target Learners:</span>
+                    <span class="font-semibold text-white">Sysadmins, Developers, SecOps Aspirants</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Lab Infrastructure:</span>
+                    <span class="font-semibold text-white">Dedicated Kali Virtual Cloud Pods</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Pedigree Guarantee:</span>
+                    <span class="font-semibold text-brand-cyan">Elite Threat Intelligence Team</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Accreditation:</span>
+                    <span class="font-semibold text-white">GoSecure Certified Defense Analyst</span>
+                  </div>
+                </div>
+                <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                  <button onclick="prefillLeadService('PBEL Cybersecurity Track')" class="w-full py-2.5 rounded-xl font-bold text-xs bg-brand-blue text-white hover:bg-blue-600 transition-colors text-center">
+                    Enroll / Corporate Cohort
+                  </button>
+                  <button onclick="openSyllabusModal('Offensive & Defensive Cyber Track')" class="w-full py-2.5 rounded-xl font-semibold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-brand-border transition-colors text-center">
+                    View Full Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 3 Content: Applied AI & ML -->
+        <div id="contentTrack3" class="track-content hidden space-y-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-4">
+              <div class="inline-flex items-center gap-2 text-xs font-mono text-brand-violet">
+                <span class="w-2 h-2 rounded-full bg-brand-violet"></span> TRACK #03 • EXPERIENTIAL CURRICULUM
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                Applied AI Engineering, RAG Pipelines & Autonomous Agents
+              </h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Move beyond standard API wrappers to build production-grade Retrieval-Augmented Generation (RAG) systems, vector database architectures, agentic task planners, and quantizations for on-premise local inference.
+              </p>
+
+              <!-- Tech Stack Badges -->
+              <div class="pt-2">
+                <div class="text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wider">Targeted Tech Stack</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-violet">PyTorch & HuggingFace</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-violet">LangChain & LlamaIndex</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-violet">Vector DBs (Qdrant / Milvus)</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-violet">vLLM & TensorRT-LLM</span>
+                  <span class="px-3 py-1 rounded-lg bg-brand-navy border border-brand-border text-xs font-mono text-brand-violet">Agentic Function Calling</span>
+                </div>
+              </div>
+
+              <!-- Real-world Capstone highlights -->
+              <div class="pt-2 space-y-2">
+                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Featured PBEL Capstone</div>
+                <div class="p-3 rounded-xl bg-brand-navy/80 border border-brand-border/60 text-xs text-slate-300">
+                  <span class="font-bold text-white">Self-Healing Security Incident Agent:</span> Build an autonomous LLM agent equipped with tool-use capabilities to parse firewall syslogs, query CVE databases, and submit auto-remediation PRs.
+                </div>
+              </div>
+            </div>
+
+            <!-- Track 3 Sandbox / Highlights Card -->
+            <div class="lg:col-span-5 space-y-4">
+              <div class="p-6 rounded-2xl bg-brand-navy border border-brand-border/80 space-y-4">
+                <h4 class="text-base font-bold text-white flex items-center justify-between">
+                  <span>Program Blueprint</span>
+                  <span class="text-xs font-mono text-brand-emerald">8 to 12 Weeks</span>
+                </h4>
+                <div class="space-y-3 text-xs text-slate-300">
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Target Learners:</span>
+                    <span class="font-semibold text-white">Software Engineers, Data Scientists</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Compute Resources:</span>
+                    <span class="font-semibold text-white">Dedicated GPU-Backed Lab Instances</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Pedigree Guarantee:</span>
+                    <span class="font-semibold text-brand-cyan">Elite Enterprise AI Architects</span>
+                  </div>
+                  <div class="flex items-center justify-between pb-2 border-b border-brand-border/50">
+                    <span class="text-slate-400">Accreditation:</span>
+                    <span class="font-semibold text-white">Applied AI Systems Specialist</span>
+                  </div>
+                </div>
+                <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                  <button onclick="prefillLeadService('PBEL Applied AI Track')" class="w-full py-2.5 rounded-xl font-bold text-xs bg-gradient-to-r from-brand-blue to-brand-violet text-white hover:opacity-90 transition-opacity text-center">
+                    Enroll / Corporate Cohort
+                  </button>
+                  <button onclick="openSyllabusModal('Applied AI & Machine Learning Track')" class="w-full py-2.5 rounded-xl font-semibold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 border border-brand-border transition-colors text-center">
+                    View Full Syllabus
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sandbox" class="py-20 bg-brand-navy relative cyber-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-5 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-mono">
+            EXPERIENTIAL TERMINAL SIMULATOR
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Test Drive Our Live Ops Command Center
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            See how GoSecure trainers and enterprise consultants interface directly with defense telemetry and AI automation pipelines. Click any preset trigger to observe real-time simulated diagnostics.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <button onclick="runTerminalCommand('audit')" class="w-full text-left p-3.5 rounded-xl bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-brand-cyan/50 transition-all flex items-center justify-between group">
+              <div>
+                <div class="text-xs font-bold text-white group-hover:text-brand-cyan font-mono">1. Execute VAPT Attack Surface Scan</div>
+                <div class="text-[11px] text-slate-400">Simulate offensive Nmap port and SSL vulnerability audit</div>
+              </div>
+              <span class="text-xs font-mono text-brand-cyan">&gt; Run</span>
+            </button>
+
+            <button onclick="runTerminalCommand('ai')" class="w-full text-left p-3.5 rounded-xl bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-brand-blueLight/50 transition-all flex items-center justify-between group">
+              <div>
+                <div class="text-xs font-bold text-white group-hover:text-brand-blueLight font-mono">2. Launch Autonomous AI RAG Pipeline</div>
+                <div class="text-[11px] text-slate-400">Parse enterprise dataset, generate vector embeddings, query LLM</div>
+              </div>
+              <span class="text-xs font-mono text-brand-blueLight">&gt; Run</span>
+            </button>
+
+            <button onclick="runTerminalCommand('pbel')" class="w-full text-left p-3.5 rounded-xl bg-brand-surface hover:bg-brand-card border border-brand-border hover:border-brand-emerald/50 transition-all flex items-center justify-between group">
+              <div>
+                <div class="text-xs font-bold text-white group-hover:text-brand-emerald font-mono">3. Provision Virtual PBEL Student Pod</div>
+                <div class="text-[11px] text-slate-400">Spin up an isolated cloud Kali container with sandbox flags</div>
+              </div>
+              <span class="text-xs font-mono text-brand-emerald">&gt; Run</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Terminal Window Mockup -->
+        <div class="lg:col-span-7">
+          <div class="rounded-2xl bg-[#070D1D] border border-brand-border/90 shadow-2xl overflow-hidden font-mono text-xs">
+            <!-- Terminal Header -->
+            <div class="bg-brand-navy px-4 py-3 border-b border-brand-border/70 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                <span class="text-slate-400 text-[11px] ml-2 font-semibold">gosecure-cloud-cli v4.8.1 -- (bash)</span>
+              </div>
+              <button onclick="clearTerminal()" class="text-[10px] text-slate-400 hover:text-white px-2 py-0.5 rounded bg-slate-800">Clear</button>
+            </div>
+
+            <!-- Terminal Body -->
+            <div id="terminalBody" class="p-5 h-96 overflow-y-auto space-y-2 text-slate-300 leading-relaxed">
+              <p class="text-brand-cyan">[SYSTEM READY] GoSecure Enterprise Sandbox node connected to primary cluster.</p>
+              <p class="text-slate-400">Type or select a diagnostic routine from the left panel to execute telemetry...</p>
+              <p class="text-brand-emerald">&gt; gosecure status --all</p>
+              <div class="pl-4 text-slate-400 space-y-0.5 border-l-2 border-brand-border">
+                <p>• Zero-Trust Mesh: ACTIVE (Encrypted mTLS 1.3)</p>
+                <p>• Threat Detection: LISTENING on 48 network endpoints</p>
+                <p>• PBEL Lab Sandboxes: 34 active student sessions</p>
+                <p>• AI Inference Engine: 99.98% uptime, median latency 14ms</p>
+              </div>
+              <p class="text-slate-400 mt-2">$ _ <span class="animate-pulse">▌</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="leadership" class="py-20 bg-brand-surface relative border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-blue/20 border border-brand-blue/40 text-brand-blueLight text-xs font-bold uppercase tracking-wider">
+          Vision & Founders
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Pioneered by Technology Veterans
+        </h2>
+        <p class="text-slate-300 text-base">
+          GoSecure Consultancy was founded on an unyielding belief: high-level corporate security and transformative artificial intelligence demand battle-tested practitioners who have led large-scale deployments at the world's most demanding enterprises.
+        </p>
+      </div>
+
+      <!-- Founding Team Profiles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Leader 1: Hitesh K -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-brand-cyan/60 transition-all duration-300 group">
+          <div>
+            <!-- Profile Avatar / Icon Placeholder -->
+            <div class="relative w-24 h-24 mb-6">
+              <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-cyan p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-full bg-brand-navy rounded-[14px] flex items-center justify-center overflow-hidden">
+                  <!-- Vector Graphic Placeholder for Hitesh -->
+                  <div class="w-full h-full bg-gradient-to-br from-brand-navy via-brand-card to-slate-800 flex items-center justify-center text-brand-cyan font-bold text-2xl font-mono">
+                    H
+                  </div>
+                </div>
+              </div>
+              <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded bg-brand-cyan text-brand-navy font-black text-[10px] uppercase shadow">
+                Cyber-AI
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="text-2xl font-extrabold text-white group-hover:text-brand-cyan transition-colors">Hitesh K</h3>
+              <div class="text-xs font-semibold text-brand-cyan uppercase tracking-wider mt-1">Co-founder & Cyber-AI Operations Head</div>
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Directs GoSecure's offensive security and AI research divisions. With over a decade of core enterprise experience, Hitesh specializes in offensive penetration testing (VAPT), Zero-Day threat modeling, and integrating deterministic LLM solutions into enterprise IT networks.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-400 border-t border-brand-border/60 pt-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span>
+                <span>Specialization: Offensive VAPT & AI Threat Modeling</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span>
+                <span>Pedigree: Enterprise Security Specialist</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-brand-border/60 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Lead Faculty • Cyber/AI</span>
+            <button onclick="scrollToContact('Consultation with Hitesh')" class="text-xs font-bold text-brand-cyan hover:underline">
+              Book Advisory &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Leader 2: Bhupendra -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-brand-blueLight/60 transition-all duration-300 group">
+          <div>
+            <!-- Profile Avatar / Icon Placeholder -->
+            <div class="relative w-24 h-24 mb-6">
+              <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-brand-blue to-brand-blueLight p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-full bg-brand-navy rounded-[14px] flex items-center justify-center overflow-hidden">
+                  <div class="w-full h-full bg-gradient-to-br from-brand-navy via-brand-card to-slate-800 flex items-center justify-center text-brand-blueLight font-bold text-2xl font-mono">
+                    B
+                  </div>
+                </div>
+              </div>
+              <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded bg-brand-blueLight text-brand-navy font-black text-[10px] uppercase shadow">
+                Data Science
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="text-2xl font-extrabold text-white group-hover:text-brand-blueLight transition-colors">Bhupendra</h3>
+              <div class="text-xs font-semibold text-brand-blueLight uppercase tracking-wider mt-1">Co-founder, Data Scientist & Curriculum Lead</div>
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Oversees systems resilience, data science initiatives, and PBEL cloud lab curriculums. An expert data scientist and systems engineer, Bhupendra has engineered mission-critical data pipelines and hybrid cloud platforms capable of processing millions of concurrent transactions.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-400 border-t border-brand-border/60 pt-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-blueLight"></span>
+                <span>Specialization: Data Science & Cloud Hardening</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-blueLight"></span>
+                <span>Pedigree: Data & Systems Expert</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-brand-border/60 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Head of Curriculum & Data</span>
+            <button onclick="scrollToContact('Consultation with Bhupendra')" class="text-xs font-bold text-brand-blueLight hover:underline">
+              Book Advisory &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Leader 3: Siddarth -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:border-brand-emerald/60 transition-all duration-300 group">
+          <div>
+            <!-- Profile Avatar / Icon Placeholder -->
+            <div class="relative w-24 h-24 mb-6">
+              <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-brand-emerald to-brand-cyan p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div class="w-full h-full bg-brand-navy rounded-[14px] flex items-center justify-center overflow-hidden">
+                  <div class="w-full h-full bg-gradient-to-br from-brand-navy via-brand-card to-slate-800 flex items-center justify-center text-brand-emerald font-bold text-2xl font-mono">
+                    S
+                  </div>
+                </div>
+              </div>
+              <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded bg-brand-emerald text-brand-navy font-black text-[10px] uppercase shadow">
+                AI Engineering
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h3 class="text-2xl font-extrabold text-white group-hover:text-brand-emerald transition-colors">Siddarth</h3>
+              <div class="text-xs font-semibold text-brand-emerald uppercase tracking-wider mt-1">Co-founder, AI Engineer & Technical Director</div>
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              Drives strategic enterprise partnerships, technical architecture, and institutional curricula. Leveraging his extensive engineering and consulting background, Siddarth bridges the acute gap between academic learning and production-readiness for Fortune 500 tech teams.
+            </p>
+
+            <div class="space-y-2 text-xs text-slate-400 border-t border-brand-border/60 pt-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald"></span>
+                <span>Specialization: Enterprise Strategy & AI Architecture</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald"></span>
+                <span>Pedigree: AI & Technical Strategy Consultant</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-brand-border/60 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-400">Technical Directorship</span>
+            <button onclick="scrollToContact('Corporate Training Partnership with Siddarth')" class="text-xs font-bold text-brand-emerald hover:underline">
+              Partner with Us &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pedigree Statement Reiteration Box -->
+      <div class="mt-12 text-center p-6 rounded-2xl bg-brand-card/50 border border-brand-border/70 max-w-4xl mx-auto">
+        <p class="text-xs sm:text-sm text-slate-300 font-medium">
+          <span class="text-brand-cyan font-bold">The GoSecure Standard:</span> Every single technical module, consultation framework, and lab challenge is personally curated and vetted by our leadership to guarantee world-class, production-ready accuracy.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="testimonials" class="py-20 bg-brand-navy relative cyber-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header with Filter Buttons -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-emerald/10 border border-brand-emerald/30 text-brand-emerald text-xs font-bold uppercase tracking-wider mb-3">
+            Social Proof & Verified Reviews
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Trusted by Enterprise CIOs & 2,500+ Engineers
+          </h2>
+          <p class="text-slate-300 text-sm mt-2 max-w-xl">
+            Read real experiences from corporate engineering directors who secured their infrastructures and ambitious professionals who accelerated their technical careers with GoSecure.
+          </p>
+        </div>
+
+        <!-- Filter Selector -->
+        <div class="flex items-center gap-2 bg-brand-surface p-1 rounded-xl border border-brand-border">
+          <button onclick="filterReviews('all')" id="btnFilterAll" class="review-filter-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-brand-blue text-white transition-all">
+            All Reviews
+          </button>
+          <button onclick="filterReviews('corporate')" id="btnFilterCorporate" class="review-filter-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
+            Corporate Audits
+          </button>
+          <button onclick="filterReviews('pbel')" id="btnFilterPbel" class="review-filter-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
+            PBEL Graduates
+          </button>
+        </div>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Review 1: Corporate Cybersecurity -->
+        <div class="review-card corporate glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-brand-border hover:border-brand-cyan/40 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                ★★★★★
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30">
+                Verified Enterprise Audit
+              </span>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "GoSecure's VAPT audit was the most thorough our fintech has ever undergone. Hitesh and his team unmasked three critical business-logic vulnerabilities that prior automated scanners missed completely. Their expertise was clearly evident in the structured executive remediation roadmaps."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-brand-border/60">
+            <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center font-bold text-brand-cyan text-sm">
+              AR
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Ananya Raghavan</div>
+              <div class="text-xs text-slate-400">Chief Information Security Officer • PayShield FinTech</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Corporate AI Automation -->
+        <div class="review-card corporate glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-brand-border hover:border-brand-blueLight/40 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                ★★★★★
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-blueLight/10 text-brand-blueLight border border-brand-blueLight/30">
+                AI Automation Client
+              </span>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "We contracted GoSecure to automate our high-volume logistics paperwork using custom fine-tuned NLP pipelines. The solution reduced our invoice reconciliation turnaround from 3 days to under 4 minutes with 99.4% accuracy. Outstanding engineering execution."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-brand-border/60">
+            <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center font-bold text-brand-blueLight text-sm">
+              VM
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Vikram Malhotra</div>
+              <div class="text-xs text-slate-400">VP of Technology Operations • TransGlobal Logistics</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: PBEL Cybersecurity Alumni -->
+        <div class="review-card pbel glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-brand-border hover:border-brand-emerald/40 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                ★★★★★
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/30">
+                PBEL Cyber Graduate
+              </span>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "The Project-Based Experiential Learning track was intense and hands-on. Instead of watching someone click buttons, we had live Kali virtual pods where we performed actual packet captures and red-team penetration testing. I transitioned from a basic helpdesk role to a Tier-2 SOC Analyst within two months of completion!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-brand-border/60">
+            <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center font-bold text-brand-emerald text-sm">
+              RK
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Rohan Kulkarni</div>
+              <div class="text-xs text-slate-400">SOC Analyst • CloudDefense Systems</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4: PBEL Data Analytics & Cognos Alumni -->
+        <div class="review-card pbel glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-brand-border hover:border-brand-cyan/40 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                ★★★★★
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/30">
+                PBEL Data Graduate
+              </span>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "Learning IBM Cognos Analytics and Microsoft Power BI from instructors who had actually deployed these tools at enterprise scale made all the difference. The PBEL capstone project was so detailed that interviewers spent 20 minutes discussing my architecture during my job interview."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-brand-border/60">
+            <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center font-bold text-brand-cyan text-sm">
+              PS
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Pooja Sharma</div>
+              <div class="text-xs text-slate-400">Senior BI Consultant • AnalyticsEdge</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 5: Corporate Corporate Training -->
+        <div class="review-card corporate glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-brand-border hover:border-brand-blueLight/40 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                ★★★★★
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-blueLight/10 text-brand-blueLight border border-brand-blueLight/30">
+                Corporate Training Cohort
+              </span>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "We engaged Siddarth and GoSecure to upskill our 45-member software development team in secure coding practices and DevSecOps pipelines. The trainers' rigor showed from day one. Our static code analysis vulnerability density dropped by 72% in our next release cycle."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-brand-border/60">
+            <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center font-bold text-brand-blueLight text-sm">
+              DJ
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Devendra Joshi</div>
+              <div class="text-xs text-slate-400">Head of Engineering • Apex Financial Cloud</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 6: Applied AI PBEL Trainee -->
+        <div class="review-card pbel glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between border border-brand-border hover:border-brand-emerald/40 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-amber-400 gap-1 text-sm">
+                ★★★★★
+              </div>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-emerald/10 text-brand-emerald border border-brand-emerald/30">
+                PBEL AI Graduate
+              </span>
+            </div>
+            <p class="text-slate-300 text-sm italic leading-relaxed mb-6">
+              "The Applied AI track bypassed superficial prompt engineering and forced us to implement vector search, custom PyTorch models, and self-hosted open LLMs. Having industry veterans critique our code architecture was the single best learning experience of my career."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-brand-border/60">
+            <div class="w-10 h-10 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center font-bold text-brand-emerald text-sm">
+              SN
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Sameer Nair</div>
+              <div class="text-xs text-slate-400">Machine Learning Engineer • QuantCognitive</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-brand-surface relative border-t border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Side: Value Props & Contact Metadata -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-bold uppercase tracking-wider">
+            Initiate Contact
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Let’s Build Secure, Autonomous Systems Together.
+          </h2>
+
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Whether you require an enterprise cybersecurity audit, custom AI workflow development, or high-impact corporate training for your engineering cohorts, our leadership is ready to assist.
+          </p>
+
+          <!-- Highlights & SLAs -->
+          <div class="space-y-4 pt-2">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-brand-navy border border-brand-border/80">
+              <div class="w-9 h-9 rounded-lg bg-brand-cyan/10 text-brand-cyan flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div class="text-xs">
+                <div class="font-bold text-white">Guaranteed &lt; 4-Hour Response</div>
+                <div class="text-slate-400">Direct technical triage, zero sales fluff</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-brand-navy border border-brand-border/80">
+              <div class="w-9 h-9 rounded-lg bg-brand-emerald/10 text-brand-emerald flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div class="text-xs">
+                <div class="font-bold text-white">Mutual NDA Protection</div>
+                <div class="text-slate-400">Enterprise security confidentiality guaranteed</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-brand-navy border border-brand-border/80">
+              <div class="w-9 h-9 rounded-lg bg-brand-blue/20 text-brand-blueLight flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <div class="text-xs">
+                <div class="font-bold text-white">Global Reach & Local Expertise</div>
+                <div class="text-slate-400">Serving enterprise clients worldwide</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Channels -->
+          <div class="pt-2 text-xs text-slate-400 space-y-2">
+            <p><strong class="text-slate-300">Office:</strong> 4th floor, SUBE KI GOTH, GWALIOR 474001</p>
+            <p><strong class="text-slate-300">Email:</strong> info@gosecureconsultancy.in</p>
+            <p><strong class="text-slate-300">Phone:</strong> +91 9509775611, +91 7746070967</p>
+          </div>
+        </div>
+
+        <!-- Right Side: Conversion-Optimized Lead Form -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl p-7 sm:p-9 border border-brand-border relative shadow-2xl">
+            
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-brand-border/60">
+              <div>
+                <h3 class="text-xl font-bold text-white">Request Consultation or Training Quote</h3>
+                <p class="text-xs text-slate-400 mt-0.5">Please provide your details below. We reply within 4 business hours.</p>
+              </div>
+              <span class="text-xs font-mono text-brand-cyan bg-brand-navy px-2.5 py-1 rounded border border-brand-border">
+                SECURE FORM
+              </span>
+            </div>
+
+            <form id="leadGenerationForm" onsubmit="handleLeadSubmit(event)" class="space-y-4">
+              
+              <!-- Persona Toggle (Corporate vs Student) -->
+              <div class="grid grid-cols-2 gap-3 mb-2">
+                <label class="cursor-pointer">
+                  <input type="radio" name="inquiryType" value="corporate" checked class="peer sr-only" onchange="toggleInquiryType('corporate')">
+                  <div class="p-2.5 rounded-xl border border-brand-border text-center text-xs font-semibold text-slate-300 peer-checked:bg-brand-blue peer-checked:text-white peer-checked:border-brand-blue transition-all">
+                    Corporate / B2B Inquiry
+                  </div>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="radio" name="inquiryType" value="individual" class="peer sr-only" onchange="toggleInquiryType('individual')">
+                  <div class="p-2.5 rounded-xl border border-brand-border text-center text-xs font-semibold text-slate-300 peer-checked:bg-brand-blue peer-checked:text-white peer-checked:border-brand-blue transition-all">
+                    Professional / PBEL Student
+                  </div>
+                </label>
+              </div>
+
+              <!-- Name & Email Inputs -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="fullName">
+                    Full Name <span class="text-brand-cyan">*</span>
+                  </label>
+                  <input type="text" id="fullName" required placeholder="e.g. Rahul Verma" class="w-full px-4 py-2.5 rounded-xl bg-brand-navy border border-brand-border text-white text-xs placeholder-slate-500 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="workEmail">
+                    Email Address <span class="text-brand-cyan">*</span>
+                  </label>
+                  <input type="email" id="workEmail" required placeholder="e.g. rahul@company.com" class="w-full px-4 py-2.5 rounded-xl bg-brand-navy border border-brand-border text-white text-xs placeholder-slate-500 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors">
+                </div>
+              </div>
+
+              <!-- Phone & Organization Inputs -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="phoneNum">
+                    Phone / WhatsApp Number
+                  </label>
+                  <input type="tel" id="phoneNum" placeholder="+91 98765 43210" class="w-full px-4 py-2.5 rounded-xl bg-brand-navy border border-brand-border text-white text-xs placeholder-slate-500 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="orgName" id="lblOrgName">
+                    Company / Organization <span class="text-brand-cyan">*</span>
+                  </label>
+                  <input type="text" id="orgName" required placeholder="e.g. Apex FinTech Pvt Ltd" class="w-full px-4 py-2.5 rounded-xl bg-brand-navy border border-brand-border text-white text-xs placeholder-slate-500 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors">
+                </div>
+              </div>
+
+              <!-- Service of Interest Selector -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="serviceSelect">
+                  Service or Training Program of Interest <span class="text-brand-cyan">*</span>
+                </label>
+                <select id="serviceSelect" required class="w-full px-4 py-2.5 rounded-xl bg-brand-navy border border-brand-border text-white text-xs focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors">
+                  <option value="" disabled selected>-- Select an offering --</option>
+                  <optgroup label="B2B Enterprise Solutions">
+                    <option value="Cybersecurity VAPT & Defense">Cybersecurity VAPT & Defensive Hardening</option>
+                    <option value="AI Automation Solutions">AI Workflow Automation & Agent Integration</option>
+                    <option value="Zero-Trust Architecture">Zero-Trust Network Implementation</option>
+                    <option value="Custom Corporate Training Cohort">Custom Corporate Training Cohort</option>
+                  </optgroup>
+                  <optgroup label="PBEL Technical Experiential Programs">
+                    <option value="PBEL Data Analytics Track">Track 1: Data Analytics & BI (Cognos/PowerBI/Python)</option>
+                    <option value="PBEL Cybersecurity Track">Track 2: Offensive & Defensive Cyber (Kali/Nmap)</option>
+                    <option value="PBEL Applied AI Track">Track 3: Applied AI Engineering & LLM Systems</option>
+                  </optgroup>
+                  <optgroup label="Other Inquiries">
+                    <option value="Executive Consultation">Executive Consultation with Leadership</option>
+                    <option value="Academic Institution Partnership">Academic / University Partnership</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- Message / Requirements -->
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1.5" for="projectRequirements">
+                  Project Details or Training Objectives <span class="text-brand-cyan">*</span>
+                </label>
+                <textarea id="projectRequirements" rows="3" required placeholder="Tell us about your team size, infrastructure scope, or training objectives..." class="w-full px-4 py-2 rounded-xl bg-brand-navy border border-brand-border text-white text-xs placeholder-slate-500 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-colors"></textarea>
+              </div>
+
+              <!-- NDA Checkbox -->
+              <div class="flex items-center gap-2 pt-1">
+                <input type="checkbox" id="ndaCheck" class="rounded bg-brand-navy border-brand-border text-brand-cyan focus:ring-0">
+                <label for="ndaCheck" class="text-[11px] text-slate-400 select-none">
+                  Request an automated Mutual Non-Disclosure Agreement (NDA) before sharing sensitive assets.
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submitFormBtn" class="w-full py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-brand-blue to-cyan-500 hover:from-blue-600 hover:to-brand-cyan text-white shadow-xl shadow-brand-blue/30 transition-all duration-300 flex items-center justify-center gap-2">
+                <span id="submitBtnText">Submit Inquiry to Our Team</span>
+                <svg id="submitSpinner" class="w-4 h-4 animate-spin hidden" viewBox="0 0 24 24" fill="none">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </button>
+
+              <p class="text-[11px] text-slate-500 text-center">
+                We strictly honor your privacy. No marketing spam. Read our <button type="button" onclick="openLegalModal('privacy')" class="text-brand-cyan hover:underline">Privacy Policy</button>.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-brand-navy border-t border-brand-border text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        
+        <!-- Col 1: Brand & Pedigree Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-cyan p-0.5">
+              <div class="w-full h-full bg-brand-navy rounded-[10px] flex items-center justify-center">
+                <svg class="w-4 h-4 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+            </div>
+            <span class="font-extrabold text-lg tracking-wider text-white">GOSECURE CONSULTANCY</span>
+          </div>
+
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            GoSecure Consultancy is a premier EdTech and enterprise cybersecurity consulting firm. All our technical training programs and enterprise defense operations are led exclusively by industry veterans.
+          </p>
+
+          <div class="p-3 rounded-xl bg-brand-surface border border-brand-border/80 text-[11px] text-slate-300">
+            <span class="font-bold text-brand-cyan">Enterprise Standard:</span> 100% of our lead trainers and cybersecurity principals bring vetted enterprise pedigrees.
+          </div>
+
+          <div class="mt-4 p-3 rounded-xl bg-brand-surface border border-brand-border/80 text-[11px] text-slate-300 space-y-1">
+            <p><strong class="text-brand-cyan">HQ:</strong> 4th floor, SUBE KI GOTH, GWALIOR 474001</p>
+            <p><strong class="text-brand-cyan">Email:</strong> info@gosecureconsultancy.in</p>
+            <p><strong class="text-brand-cyan">Phone:</strong> +91 9509775611, +91 7746070967</p>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="w-8 h-8 rounded-lg bg-brand-surface border border-brand-border hover:border-brand-cyan hover:text-brand-cyan flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="w-8 h-8 rounded-lg bg-brand-surface border border-brand-border hover:border-brand-cyan hover:text-brand-cyan flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter" class="w-8 h-8 rounded-lg bg-brand-surface border border-brand-border hover:border-brand-cyan hover:text-brand-cyan flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Enterprise Services -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide">Enterprise Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" onclick="prefillLeadService('Cybersecurity VAPT & Defense')" class="hover:text-brand-cyan transition-colors">Vulnerability Assessment (VAPT)</a></li>
+            <li><a href="#services" onclick="prefillLeadService('AI Automation Solutions')" class="hover:text-brand-cyan transition-colors">Custom AI & ML Automation</a></li>
+            <li><a href="#services" onclick="prefillLeadService('Zero-Trust Architecture')" class="hover:text-brand-cyan transition-colors">Zero-Trust Network Hardening</a></li>
+            <li><a href="#services" class="hover:text-brand-cyan transition-colors">ISO 27001 & SOC 2 Compliance</a></li>
+            <li><a href="#services" class="hover:text-brand-cyan transition-colors">Intelligent Document Processing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: PBEL Training Programs -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide">PBEL Technical Tracks</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#training" onclick="switchTrack('track1')" class="hover:text-brand-cyan transition-colors">Data Analytics & Cognos / Power BI</a></li>
+            <li><a href="#training" onclick="switchTrack('track2')" class="hover:text-brand-cyan transition-colors">Practical Cybersecurity & Kali Labs</a></li>
+            <li><a href="#training" onclick="switchTrack('track3')" class="hover:text-brand-cyan transition-colors">Applied AI & LLM Systems Engineering</a></li>
+            <li><a href="#training" class="hover:text-brand-cyan transition-colors">Corporate Team Upskilling Cohorts</a></li>
+            <li><a href="#training" class="hover:text-brand-cyan transition-colors">Institutional Academic Partnerships</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate & Legal -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wide">Governance & Legal</h4>
+          <ul class="space-y-2 text-xs">
+            <li><button onclick="openLegalModal('terms')" class="hover:text-brand-cyan transition-colors text-left">Terms & Conditions</button></li>
+            <li><button onclick="openLegalModal('privacy')" class="hover:text-brand-cyan transition-colors text-left">Privacy Policy</button></li>
+            <li><button onclick="openLegalModal('security')" class="hover:text-brand-cyan transition-colors text-left">Security & Ethics Standard</button></li>
+            <li><a href="#leadership" class="hover:text-brand-cyan transition-colors">Founding Team & Vision</a></li>
+            <li><a href="#contact" class="hover:text-brand-cyan transition-colors">Enterprise NDA Request</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-12 pt-8 border-t border-brand-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div>
+          &copy; <span id="currentYear"></span> GOSECURE CONSULTANCY. All rights reserved. Enterprise AI & Cybersecurity.
+        </div>
+        <div class="flex items-center gap-6">
+          <span>Expert Faculty Certified</span>
+          <span>ISO 27001 Methodology Aligned</span>
+          <span>Zero-Trust Infrastructure</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Legal Modal (Privacy, Terms, Security) -->
+  <div id="legalModal" class="fixed inset-0 z-50 hidden bg-brand-navy/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-2xl w-full p-6 sm:p-8 border border-brand-border max-h-[85vh] flex flex-col shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-brand-border/80">
+        <h3 id="legalModalTitle" class="text-lg font-bold text-white">Terms & Conditions</h3>
+        <button onclick="closeLegalModal()" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-brand-surface">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="legalModalContent" class="py-4 text-xs text-slate-300 overflow-y-auto space-y-4 leading-relaxed">
+        <!-- Content will be injected dynamically -->
+      </div>
+
+      <div class="pt-4 border-t border-brand-border/80 flex justify-end">
+        <button onclick="closeLegalModal()" class="px-5 py-2 rounded-xl text-xs font-semibold bg-brand-blue text-white hover:bg-blue-600 transition-colors">
+          I Understand & Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Syllabus Preview Modal -->
+  <div id="syllabusModal" class="fixed inset-0 z-50 hidden bg-brand-navy/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card rounded-2xl max-w-xl w-full p-6 sm:p-8 border border-brand-border max-h-[85vh] flex flex-col shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-brand-border/80">
+        <div>
+          <h3 id="syllabusModalTitle" class="text-base font-bold text-white">Curriculum Blueprint</h3>
+          <span class="text-[11px] font-mono text-brand-cyan">EXPERT CURATED EXPERIENTIAL MODULES</span>
+        </div>
+        <button onclick="closeSyllabusModal()" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-brand-surface">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="syllabusModalBody" class="py-4 text-xs text-slate-300 overflow-y-auto space-y-3 leading-relaxed">
+        <!-- Dynamically injected syllabus details -->
+      </div>
+
+      <div class="pt-4 border-t border-brand-border/80 flex items-center justify-between">
+        <span class="text-[11px] text-slate-400">Want custom corporate customization?</span>
+        <button onclick="closeSyllabusModal(); scrollToContact('Custom Syllabus Cohort');" class="px-4 py-2 rounded-xl text-xs font-bold bg-brand-cyan text-brand-navy hover:bg-white transition-colors">
+          Request Cohort Proposal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lead Submission Toast Notification (NO alert() used) -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 max-w-md bg-brand-surface border border-brand-emerald rounded-2xl p-4 shadow-2xl flex items-start gap-3">
+    <div class="w-8 h-8 rounded-xl bg-brand-emerald/20 text-brand-emerald flex items-center justify-center shrink-0 mt-0.5">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <div class="flex-1">
+      <h4 class="text-xs font-bold text-white" id="toastTitle">Inquiry Received</h4>
+      <p class="text-[11px] text-slate-300 mt-0.5" id="toastMessage">A technical principal will contact you within 4 hours.</p>
+    </div>
+    <button onclick="dismissToast()" class="text-slate-400 hover:text-white p-1">
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    // Set Current Dynamic Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Close Mobile Drawer on Link Click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Dynamic Header Background on Scroll
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-xl', 'bg-brand-navy/95');
+      } else {
+        header.classList.remove('shadow-xl', 'bg-brand-navy/95');
+      }
+    });
+
+    // Smooth Scroll Helper & Form Prefill
+    function scrollToContact(serviceName) {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+        if (serviceName) {
+          const serviceSelect = document.getElementById('serviceSelect');
+          if (serviceSelect) {
+            // Find closest matching option or set value
+            for (let i = 0; i < serviceSelect.options.length; i++) {
+              if (serviceSelect.options[i].text.toLowerCase().includes(serviceName.toLowerCase()) || 
+                  serviceSelect.options[i].value.toLowerCase().includes(serviceName.toLowerCase())) {
+                serviceSelect.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    function prefillLeadService(serviceName) {
+      scrollToContact(serviceName);
+    }
+
+    // Toggle Inquiry Persona Type (Corporate vs Individual Student)
+    function toggleInquiryType(type) {
+      const orgLabel = document.getElementById('lblOrgName');
+      const orgInput = document.getElementById('orgName');
+      if (type === 'individual') {
+        orgLabel.innerHTML = 'University / Current Employer <span class="text-brand-cyan">*</span>';
+        orgInput.placeholder = 'e.g. SRM Institute / Freelance Developer';
+      } else {
+        orgLabel.innerHTML = 'Company / Organization <span class="text-brand-cyan">*</span>';
+        orgInput.placeholder = 'e.g. Apex FinTech Pvt Ltd';
+      }
+    }
+
+    // PBEL Track Tab Switcher
+    function switchTrack(trackId) {
+      const tracks = ['track1', 'track2', 'track3'];
+      tracks.forEach(t => {
+        const btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
+        const content = document.getElementById('content' + t.charAt(0).toUpperCase() + t.slice(1));
+        
+        if (t === trackId) {
+          btn.className = 'track-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 bg-brand-blue text-white shadow-md';
+          content.classList.remove('hidden');
+          content.classList.add('block');
+        } else {
+          btn.className = 'track-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 text-slate-300 hover:text-white';
+          content.classList.remove('block');
+          content.classList.add('hidden');
+        }
+      });
+    }
+
+    // Testimonials Filter
+    function filterReviews(category) {
+      const cards = document.querySelectorAll('.review-card');
+      const btns = document.querySelectorAll('.review-filter-btn');
+
+      btns.forEach(btn => {
+        btn.classList.remove('bg-brand-blue', 'text-white');
+        btn.classList.add('text-slate-400');
+      });
+
+      if (category === 'all') {
+        document.getElementById('btnFilterAll').classList.add('bg-brand-blue', 'text-white');
+        document.getElementById('btnFilterAll').classList.remove('text-slate-400');
+        cards.forEach(c => c.style.display = 'flex');
+      } else if (category === 'corporate') {
+        document.getElementById('btnFilterCorporate').classList.add('bg-brand-blue', 'text-white');
+        document.getElementById('btnFilterCorporate').classList.remove('text-slate-400');
+        cards.forEach(c => {
+          c.style.display = c.classList.contains('corporate') ? 'flex' : 'none';
+        });
+      } else if (category === 'pbel') {
+        document.getElementById('btnFilterPbel').classList.add('bg-brand-blue', 'text-white');
+        document.getElementById('btnFilterPbel').classList.remove('text-slate-400');
+        cards.forEach(c => {
+          c.style.display = c.classList.contains('pbel') ? 'flex' : 'none';
+        });
+      }
+    }
+
+    // Interactive Terminal Logic
+    const terminalBody = document.getElementById('terminalBody');
+
+    function runTerminalCommand(type) {
+      let output = '';
+      if (type === 'audit') {
+        output = `
+<p class="text-brand-cyan">&gt; gosecure-vapt --target 192.168.1.0/24 --stealth-syn</p>
+<p class="text-slate-400">[INIT] Commencing offensive reconnaissance matrix...</p>
+<p class="text-slate-300">[+] Host discovered: 192.168.1.10 (App Gateway) - OS: Linux 6.x</p>
+<p class="text-slate-300">[+] Open Ports: 22/tcp (SSH-OpenSSH 8.9), 443/tcp (TLSv1.3), 8080/tcp (Spring-Cloud)</p>
+<p class="text-amber-400">[!] CVE-AUDIT: Sensitive diagnostic actuator exposed at /actuator/heapdump</p>
+<p class="text-brand-emerald">[✓] Mitigation Rule generated: WAF-093-RBAC blocked public route. Status: SECURED.</p>
+        `;
+      } else if (type === 'ai') {
+        output = `
+<p class="text-brand-blueLight">&gt; python -m gosecure_rag --ingest ./contracts/2026/ --model mistral-embed</p>
+<p class="text-slate-400">[INFO] Chunking 480 pages of enterprise contractual SLAs into semantic blocks...</p>
+<p class="text-slate-300">[INFO] Embedding vectors generated: 14,200 vectors -&gt; Upserted to Qdrant cluster.</p>
+<p class="text-slate-300">[QUERY] "Summarize indemnification clauses for 3rd-party vendor breaches"</p>
+<p class="text-brand-emerald">[AI RESPONSE generated in 16.4ms]: "Vendor maintains $5M cyber-liability coverage with 2-hr incident notification SLA under Section 14.3."</p>
+        `;
+      } else if (type === 'pbel') {
+        output = `
+<p class="text-brand-emerald">&gt; pbel-pod deploy --student-id "GOS-994" --env kali-rolling-sandbox</p>
+<p class="text-slate-400">[CONTAINER] Allocating isolated VLAN namespace [vlan-402]...</p>
+<p class="text-slate-300">[CONTAINER] Mounting toolchain: nmap, wireshark, metasploit, burpsuite-pro-headless...</p>
+<p class="text-slate-300">[LAB STATUS] Virtual Sandbox active at: <span class="text-brand-cyan">https://sandbox-gos-994.gosecure.internal</span></p>
+<p class="text-brand-cyan">[PBEL MENTOR] Lead trainer active in channel #lab-advisory. Ready for capstone challenge.</p>
+        `;
+      }
+
+      terminalBody.innerHTML += output + '<p class="text-slate-400 mt-1">$ _ <span class="animate-pulse">▌</span></p>';
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+
+    function clearTerminal() {
+      terminalBody.innerHTML = `
+<p class="text-brand-cyan">[SYSTEM RESET] Screen cleared. Ready for next command...</p>
+<p class="text-slate-400">$ _ <span class="animate-pulse">▌</span></p>
+      `;
+    }
+
+    // Lead Form Submission Handler (Polished, Non-blocking, NO alert())
+    function handleLeadSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submitFormBtn');
+      const submitBtnText = document.getElementById('submitBtnText');
+      const submitSpinner = document.getElementById('submitSpinner');
+      
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('workEmail').value.trim();
+      const service = document.getElementById('serviceSelect').value;
+
+      // Loading state
+      submitBtn.disabled = true;
+      submitBtnText.textContent = 'Encrypting & Transmitting...';
+      submitSpinner.classList.remove('hidden');
+
+      setTimeout(() => {
+        // Reset button
+        submitBtn.disabled = false;
+        submitBtnText.textContent = 'Submit Inquiry to Our Team';
+        submitSpinner.classList.add('hidden');
+
+        // Reset form
+        document.getElementById('leadGenerationForm').reset();
+
+        // Show Toast
+        showToast(
+          'Inquiry Successfully Routed!',
+          `Thank you, ${name}. Your requirements for "${service || 'Consultancy'}" have been dispatched to our lead team. We will respond to ${email} within 4 hours.`
+        );
+      }, 1000);
+    }
+
+    // Custom Toast Notification System
+    let toastTimeout;
+    function showToast(title, message) {
+      clearTimeout(toastTimeout);
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastTitle').textContent = title;
+      document.getElementById('toastMessage').textContent = message;
+
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      toastTimeout = setTimeout(() => {
+        dismissToast();
+      }, 8000);
+    }
+
+    function dismissToast() {
+      const toast = document.getElementById('toastNotification');
+      toast.classList.add('translate-y-32', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }
+
+    // Legal Modals Manager
+    const legalModal = document.getElementById('legalModal');
+    const legalTitle = document.getElementById('legalModalTitle');
+    const legalContent = document.getElementById('legalModalContent');
+
+    const legalData = {
+      terms: {
+        title: "Terms & Conditions | GoSecure Consultancy",
+        content: `
+          <p><strong>1. Scope of Services:</strong> GoSecure Consultancy provides specialized business-to-business information security evaluations, penetration testing (VAPT), bespoke machine learning automation, and Project-Based Experiential Learning (PBEL) technical training.</p>
+          <p><strong>2. Ethical Standards & Authorization:</strong> All cybersecurity testing, simulation, and training are strictly conducted within authorized boundaries. Clients must provide written authorization prior to any offensive security or simulated exploitation exercises.</p>
+          <p><strong>3. Intellectual Property:</strong> All PBEL proprietary curricula, lab architectures, and automation models provided as deliverables are protected by copyright. Deliverables created specifically for a client pursuant to a Statement of Work belong exclusively to the client.</p>
+          <p><strong>4. Expert Verification:</strong> GoSecure certifies that our lead course authors and curriculum directors bring verified enterprise experience.</p>
+          <p><strong>5. Limitation of Liability:</strong> GoSecure executes all assessments according to highest industry standards (OWASP, NIST SP 800-115, CIS Benchmarks). In no event shall GoSecure be liable for indirect or consequential damages.</p>
+        `
+      },
+      privacy: {
+        title: "Privacy & Data Protection Policy",
+        content: `
+          <p><strong>1. Information Collection:</strong> We collect contact details, corporate affiliations, and project requirements strictly for the purpose of scoping technical consultancies and training cohorts.</p>
+          <p><strong>2. Absolute Confidentiality:</strong> GoSecure will never sell, lease, or monetize your corporate contact or student data. All corporate telemetry provided during VAPT or AI training is processed on encrypted channels.</p>
+          <p><strong>3. Data Retention:</strong> Prospective inquiry information is retained only as long as necessary to fulfill professional consultations, after which it is securely expunged upon client request.</p>
+          <p><strong>4. Security Controls:</strong> In alignment with our cybersecurity posture, all stored data is encrypted at rest (AES-256) and in transit (TLS 1.3).</p>
+        `
+      },
+      security: {
+        title: "Security & Responsible Disclosure Standard",
+        content: `
+          <p><strong>1. Defensive Hardening:</strong> GoSecure adheres strictly to Zero-Trust architecture principles across all internal and client-facing infrastructure.</p>
+          <p><strong>2. Responsible Vulnerability Disclosure:</strong> Any security researcher discovering potential vulnerabilities in GoSecure endpoints is encouraged to report them to <code>security@gosecureconsultancy.in</code> under safe harbor terms.</p>
+          <p><strong>3. Lab Isolation:</strong> All student sandboxes in our PBEL programs are completely segregated within ephemeral, network-isolated virtualization pods preventing outbound lateral movement.</p>
+        `
+      }
+    };
+
+    function openLegalModal(type) {
+      const data = legalData[type] || legalData['terms'];
+      legalTitle.textContent = data.title;
+      legalContent.innerHTML = data.content;
+      legalModal.classList.remove('hidden');
+    }
+
+    function closeLegalModal() {
+      legalModal.classList.add('hidden');
+    }
+
+    // Syllabus Modal Manager
+    const syllabusModal = document.getElementById('syllabusModal');
+    const syllabusTitle = document.getElementById('syllabusModalTitle');
+    const syllabusBody = document.getElementById('syllabusModalBody');
+
+    const syllabusDetails = {
+      'Data Analytics & BI Track': `
+        <div class="space-y-3">
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 1: Advanced Data Wrangling & Pipelines</span>
+            <span class="text-slate-400 text-[11px]">Python (Pandas/NumPy), SQL window functions, distributed ETL workflows.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 2: Statistical Modeling & R Programming</span>
+            <span class="text-slate-400 text-[11px]">Hypothesis testing, regression modeling, time-series forecasting algorithms.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 3: Enterprise BI Dashboards (Power BI + IBM Cognos)</span>
+            <span class="text-slate-400 text-[11px]">Cognos multi-dimensional reporting, DAX expressions, corporate KPI rollups.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 4: Enterprise Capstone</span>
+            <span class="text-slate-400 text-[11px]">Production data pipeline predicting supply chain delivery disruptions with 95% confidence.</span>
+          </div>
+        </div>
+      `,
+      'Offensive & Defensive Cyber Track': `
+        <div class="space-y-3">
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 1: Reconnaissance & Network Threat Surface Mapping</span>
+            <span class="text-slate-400 text-[11px]">Passive OSINT, stealth Nmap scanning, packet manipulation with Scapy.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 2: Offensive Web & API Exploitation</span>
+            <span class="text-slate-400 text-[11px]">OWASP Top 10, SQLi, SSRF, JWT bypasses, Burp Suite Pro deep-dive.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 3: Defensive SIEM & Incident Response</span>
+            <span class="text-slate-400 text-[11px]">Wireshark traffic analysis, Snort/Suricata rules, memory forensics, zero-trust RBAC.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 4: Multi-Stage Red Team Capstone</span>
+            <span class="text-slate-400 text-[11px]">Live breach simulation on enterprise AD and microservice cluster + executive VAPT report.</span>
+          </div>
+        </div>
+      `,
+      'Applied AI & Machine Learning Track': `
+        <div class="space-y-3">
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 1: Deep Learning Foundations with PyTorch</span>
+            <span class="text-slate-400 text-[11px]">Tensors, backprop optimization, custom convolutional & transformer architectures.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 2: Enterprise RAG & Vector Embeddings</span>
+            <span class="text-slate-400 text-[11px]">Chunking strategies, Qdrant/Milvus indexing, hybrid BM25 + dense neural retrieval.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 3: Autonomous Multi-Agent Workflows</span>
+            <span class="text-slate-400 text-[11px]">LangGraph/LlamaIndex agents, structured tool invocation, hallucination guards.</span>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-navy border border-brand-border">
+            <span class="font-bold text-white text-xs block">Module 4: Production LLM Deployment Capstone</span>
+            <span class="text-slate-400 text-[11px]">Quantization (GGUF/AWQ), vLLM serving, streaming UI, and rate-limited latency tuning.</span>
+          </div>
+        </div>
+      `
+    };
+
+    function openSyllabusModal(trackName) {
+      syllabusTitle.textContent = trackName;
+      syllabusBody.innerHTML = syllabusDetails[trackName] || '<p class="text-slate-300">Detailed syllabus available upon corporate request.</p>';
+      syllabusModal.classList.remove('hidden');
+    }
+
+    function closeSyllabusModal() {
+      syllabusModal.classList.add('hidden');
+    }
+
+    // Close modals when clicking backdrop or pressing ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLegalModal();
+        closeSyllabusModal();
+      }
+    });
+
+    [legalModal, syllabusModal].forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+        }
+      });
+    });
+
+    // Simulated Telemetry Ping Jitter (for realistic live feel)
+    setInterval(() => {
+      const latEl = document.getElementById('statLatency');
+      if (latEl) {
+        const jitter = (13.8 + Math.random() * 1.2).toFixed(1);
+        latEl.textContent = `${jitter} ms`;
+      }
+    }, 3500);
+  </script>
+</body>
+</html>
